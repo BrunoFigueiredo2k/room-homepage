@@ -1,0 +1,57 @@
+/* Mixins */
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+
+    li {
+        display: inline-block;
+
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+    }
+}
+
+.horizontal-list {
+    @include horizontal-list;
+}
+
+.row {
+    display: flex;
+
+    .col {
+        height: 50vh;
+    }
+
+    .col-content {
+        padding: 50px 40px;
+    }
+}
+
+@mixin backgroundImageCover($img-url) {
+    background: url($img-url);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+// Set images to columns
+#hero-bg-top-1 {
+    @include backgroundImageCover('../images/desktop-image-hero-1.jpg');
+    width: 66%;
+}
+
+#hero-bg-bottom-1 {
+    @include backgroundImageCover('../images/image-about-dark.jpg');
+    width: 66%;
+}
+
+#hero-bg-bottom-2 {
+    @include backgroundImageCover('../images/image-about-light.jpg');
+    width: 66%;
+}
