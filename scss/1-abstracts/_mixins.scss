@@ -7,13 +7,20 @@
 
 @mixin horizontal-list {
     @include reset-list;
+    padding: 30px;
 
     li {
         display: inline-block;
+        text-transform: lowercase;
+        font-weight: 500;
 
         margin: {
             left: -2px;
             right: 2em;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
@@ -24,34 +31,32 @@
 
 .row {
     display: flex;
+    height: 100%;
 
     .col {
-        height: 50vh;
+        flex: 50%;
+        position: relative;
     }
 
-    .col-content {
-        padding: 50px 40px;
+    .bg-col {
+        padding: 7% 5%;
+    }
+
+    .sm-col {
+        padding: 4% 3%;
     }
 }
 
-@mixin backgroundImageCover($img-url) {
-    background: url($img-url);
-    background-repeat: no-repeat;
-    background-size: contain;
+.upper-row {
+    height: 65vh;
 }
 
-// Set images to columns
-#hero-bg-top-1 {
-    @include backgroundImageCover('../images/desktop-image-hero-1.jpg');
-    width: 66%;
+.bottom-row {
+    height: 35vh;
 }
 
-#hero-bg-bottom-1 {
-    @include backgroundImageCover('../images/image-about-dark.jpg');
-    width: 66%;
-}
-
-#hero-bg-bottom-2 {
-    @include backgroundImageCover('../images/image-about-light.jpg');
-    width: 66%;
+.slider {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }

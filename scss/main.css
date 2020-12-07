@@ -7,47 +7,55 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  padding: 30px;
 }
 
 .horizontal-list li {
   display: inline-block;
+  text-transform: lowercase;
+  font-weight: 500;
   margin-left: -2px;
   margin-right: 2em;
+}
+
+.horizontal-list li:hover {
+  cursor: pointer;
 }
 
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
 }
 
 .row .col {
-  height: 50vh;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  position: relative;
 }
 
-.row .col-content {
-  padding: 50px 40px;
+.row .bg-col {
+  padding: 7% 5%;
 }
 
-#hero-bg-top-1 {
-  background: url("../images/desktop-image-hero-1.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 66%;
+.row .sm-col {
+  padding: 4% 3%;
 }
 
-#hero-bg-bottom-1 {
-  background: url("../images/image-about-dark.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 66%;
+.upper-row {
+  height: 65vh;
 }
 
-#hero-bg-bottom-2 {
-  background: url("../images/image-about-light.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 66%;
+.bottom-row {
+  height: 35vh;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /* Import all base .scss files */
@@ -184,10 +192,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
   text-rendering: optimizelegibility;
   margin-top: 0;
+  margin-bottom: 30px;
 }
 
 h1 small,
@@ -195,21 +205,59 @@ h2 small,
 h3 small,
 h4 small,
 h5 small,
-h6 small {
+h6 small,
+p small {
   font-weight: normal;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16.8px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #a1a1a1;
+  line-height: 1.75em;
 }
 
 /* Import all components .scss files */
 /* Place all button components styling here */
-.btn-primary {
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
+.cta {
+  color: #454545;
   border: none;
+  background-color: transparent;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.btn-primary:hover {
+.cta:hover {
   cursor: pointer;
+}
+
+.slider-btn {
+  height: 60px;
+  width: 60px;
+  background-color: black;
+  color: #a1a1a1;
+  padding: 22px;
+  float: left;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.slider-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 /* Place all input components styling here */
@@ -228,6 +276,30 @@ textarea:focus {
 }
 
 /* Place all modal/popup components styling here */
+#hero-bg-top-1 {
+  background: url("../images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+  -webkit-box-flex: 90%;
+      -ms-flex: 90%;
+          flex: 90%;
+}
+
+#hero-bg-bottom-1 {
+  background: url("../images/image-about-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+
+#hero-bg-bottom-2 {
+  background: url("../images/image-about-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+
 /* Import all layouts .scss files */
 /* Footer component */
 footer {

@@ -2,9 +2,8 @@
 $font-spartan: 'Spartan',
 sans-serif;
 
-// Headings
-$font-size-h1: 40px;
-$line-height-h1: 1.7em;
+// Margins
+$bottom-margin-typography: 30px;
 
 // Font-weights
 $weight-light: 500;
@@ -19,6 +18,9 @@ $dark-gray: hsl(0, 0%, 63%);
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
 $very-dark-gray: hsl(0, 0%, 27%);
+
+// Transitions
+$transition-ease: 200ms ease;
 
 // Screen widths
 $mobile: 375px;

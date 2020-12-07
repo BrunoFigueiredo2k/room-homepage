@@ -1,11 +1,28 @@
 /* Place all button components styling here */
-.btn-primary {
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
+.cta {
+    color: $very-dark-gray;
     border: none;
+    background-color: transparent;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: $weight-normal;
 
     &:hover {
         cursor: pointer;
+    }
+}
+
+.slider-btn {
+    height: 60px;
+    width: 60px;
+    background-color: $black;
+    color: $dark-gray;
+    padding: 22px;
+    float: left;
+    transition: $transition-ease;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
     }
 }

@@ -19,12 +19,33 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     margin: 0;
     text-rendering: optimizelegibility; // Fix the character spacing for headings
     margin-top: 0;
+    margin-bottom: $bottom-margin-typography;
 
     small {
         font-weight: normal;
     }
+}
+
+h1 {
+    font-size: #{$base-font-size * 3.5};
+    font-weight: $weight-bold;
+}
+
+h3 {
+    font-size: #{$base-font-size * 1.4};
+    font-weight: $weight-normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: #{$bottom-margin-typography - 20px};
+}
+
+p {
+    font-size: #{$base-font-size + 2px};
+    color: $dark-gray;
+    line-height: 1.75em;
 }

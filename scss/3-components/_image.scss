@@ -1,0 +1,20 @@
+@mixin backgroundImageCover($img-url) {
+    background: url($img-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+}
+
+// Set images to columns
+#hero-bg-top-1 {
+    @include backgroundImageCover('../images/desktop-image-hero-1.jpg');
+    flex: 90%;
+}
+
+#hero-bg-bottom-1 {
+    @include backgroundImageCover('../images/image-about-dark.jpg');
+}
+
+#hero-bg-bottom-2 {
+    @include backgroundImageCover('../images/image-about-light.jpg');
+}
