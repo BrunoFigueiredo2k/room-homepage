@@ -6,9 +6,12 @@
     letter-spacing: 8px;
     text-transform: uppercase;
     font-weight: $weight-normal;
+    transition: $transition-ease;
 
     &:hover {
         cursor: pointer;
+        margin-left: 15px;
+        opacity: 0.8;
     }
 }
 

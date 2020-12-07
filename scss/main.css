@@ -238,10 +238,14 @@ p {
   letter-spacing: 8px;
   text-transform: uppercase;
   font-weight: 600;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
 }
 
 .cta:hover {
   cursor: pointer;
+  margin-left: 15px;
+  opacity: 0.8;
 }
 
 .slider-btn {
