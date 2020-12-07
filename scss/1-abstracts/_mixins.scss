@@ -6,13 +6,13 @@
 }
 
 @mixin mobile {
-    @media (min-width: $mobile-width) and (max-width: #{$desktop-width - 1px}) {
+    @media (max-width: #{$desktop-width - 100px}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: #{$desktop-width}) {
+    @media (min-width: $desktop-width) {
         @content;
     }
 }
@@ -21,14 +21,20 @@
     @include reset-list;
     padding: 30px;
 
+    @include mobile {
+        padding: 20px 10px;
+    }
+
     li {
         display: inline-block;
         text-transform: lowercase;
         font-weight: 500;
 
-        margin: {
-            left: -2px;
-            right: 2em;
+        @include desktop {
+            margin: {
+                left: -2px;
+                right: 2em;
+            }
         }
 
         &:hover {

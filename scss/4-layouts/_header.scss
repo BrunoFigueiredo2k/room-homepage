@@ -1,27 +1,41 @@
 /* Header component */
 header {
-    color: white;
+    color: $white;
     padding: 20px;
 
     .hamburger-menu {
         display: none;
+        float: left;
+        font-size: 30px;
+    }
+
+    @include desktop {
+        .logo-li {
+            margin-right: 40px;
+        }
+
+        .menu-items {
+            display: inline-block;
+        }
     }
 
     @include mobile {
+        // background-color: $white;
+        // color: $black;
         text-align: center;
 
         .logo-li,
         .hamburger-menu {
-            display: inline-block !important;
+            display: inline-block;
         }
 
-        .hamburger-menu {
-            float: left;
-            font-size: 26px;
-        }
+        .menu-items {
 
-        li {
-            display: none !important;
+            li {
+                font-weight: $weight-bold;
+                display: none;
+                margin: 0 10px;
+            }
         }
     }
 }

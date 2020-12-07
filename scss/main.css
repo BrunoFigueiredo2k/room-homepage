@@ -10,24 +10,27 @@
   padding: 30px;
 }
 
+@media (max-width: 1340px) {
+  .horizontal-list {
+    padding: 20px 10px;
+  }
+}
+
 .horizontal-list li {
   display: inline-block;
   text-transform: lowercase;
   font-weight: 500;
-  margin-left: -2px;
-  margin-right: 2em;
+}
+
+@media (min-width: 1440px) {
+  .horizontal-list li {
+    margin-left: -2px;
+    margin-right: 2em;
+  }
 }
 
 .horizontal-list li:hover {
   cursor: pointer;
-}
-
-.active {
-  display: block;
-}
-
-.inactive {
-  display: none;
 }
 
 /* Import all base .scss files */
@@ -168,8 +171,8 @@ h6,
 p {
   margin: 0;
   text-rendering: optimizelegibility;
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 small,
@@ -192,7 +195,7 @@ h3 {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 p {
@@ -212,6 +215,12 @@ p {
   font-weight: 600;
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
+}
+
+@media (max-width: 1340px) {
+  .cta {
+    margin-bottom: 60px;
+  }
 }
 
 .cta:hover {
@@ -275,13 +284,6 @@ textarea:focus {
   background-position: 60%;
 }
 
-@media (min-width: 375px) and (max-width: 1439px) {
-  #hero-bg-bottom-1,
-  #hero-bg-bottom-2 {
-    height: 40vh !important;
-  }
-}
-
 /* Import all layouts .scss files */
 /* Footer component */
 footer {
@@ -298,22 +300,31 @@ header {
 
 header .hamburger-menu {
   display: none;
+  float: left;
+  font-size: 30px;
 }
 
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (min-width: 1440px) {
+  header .logo-li {
+    margin-right: 40px;
+  }
+  header .menu-items {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1340px) {
   header {
     text-align: center;
   }
   header .logo-li,
   header .hamburger-menu {
-    display: inline-block !important;
+    display: inline-block;
   }
-  header .hamburger-menu {
-    float: left;
-    font-size: 26px;
-  }
-  header li {
-    display: none !important;
+  header .menu-items li {
+    font-weight: 700;
+    display: none;
+    margin: 0 10px;
   }
 }
 
@@ -324,7 +335,7 @@ header .hamburger-menu {
   height: 100%;
 }
 
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (max-width: 1340px) {
   .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -340,7 +351,7 @@ header .hamburger-menu {
   position: relative;
 }
 
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (max-width: 1340px) {
   .row .col {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
@@ -353,6 +364,9 @@ header .hamburger-menu {
 }
 
 .row .sm-col {
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
   padding: 4% 3%;
 }
 
@@ -360,8 +374,20 @@ header .hamburger-menu {
   height: 65vh;
 }
 
+@media (max-width: 1340px) {
+  .upper-row {
+    height: 100vh;
+  }
+}
+
 .bottom-row {
   height: 35vh;
+}
+
+@media (max-width: 1340px) {
+  .bottom-row {
+    height: 100vh;
+  }
 }
 
 .slider {

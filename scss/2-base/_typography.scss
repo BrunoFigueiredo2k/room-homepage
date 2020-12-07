@@ -23,8 +23,8 @@ h6,
 p {
     margin: 0;
     text-rendering: optimizelegibility; // Fix the character spacing for headings
-    margin-top: 0;
-    margin-bottom: $bottom-margin-typography;
+    margin-top: $margin-typography;
+    margin-bottom: $margin-typography;
 
     small {
         font-weight: normal;
@@ -41,7 +41,7 @@ h3 {
     font-weight: $weight-normal;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: #{$bottom-margin-typography - 20px};
+    margin-bottom: #{$margin-typography - 20px};
 }
 
 p {

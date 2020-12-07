@@ -20,16 +20,25 @@
     }
 
     .sm-col {
+        flex: 70%;
         padding: 4% 3%;
     }
 }
 
 .upper-row {
     height: 65vh;
+
+    @include mobile {
+        height: 100vh;
+    }
 }
 
 .bottom-row {
     height: 35vh;
+
+    @include mobile {
+        height: 100vh;
+    }
 }
 
 .slider {

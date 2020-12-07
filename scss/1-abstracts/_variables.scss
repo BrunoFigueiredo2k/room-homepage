@@ -3,7 +3,7 @@ $font-spartan: 'Spartan',
 sans-serif;
 
 // Margins
-$bottom-margin-typography: 30px;
+$margin-typography: 20px;
 
 // Font-weights
 $weight-light: 500;
@@ -25,12 +25,3 @@ $transition-ease: 200ms ease;
 // Screen widths
 $mobile-width: 375px;
 $desktop-width: 1440px;
-
-// Active class
-.active {
-    display: block;
-}
-
-.inactive {
-    display: none;
-}

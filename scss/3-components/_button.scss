@@ -8,6 +8,10 @@
     font-weight: $weight-normal;
     transition: $transition-ease;
 
+    @include mobile {
+        margin-bottom: 60px;
+    }
+
     &:hover {
         cursor: pointer;
         margin-left: 15px;
