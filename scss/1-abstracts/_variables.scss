@@ -23,5 +23,14 @@ $very-dark-gray: hsl(0, 0%, 27%);
 $transition-ease: 200ms ease;
 
 // Screen widths
-$mobile: 375px;
-$desktop: 1440px;
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// Active class
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}

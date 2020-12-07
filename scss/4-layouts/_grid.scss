@@ -1,0 +1,39 @@
+.row {
+    display: flex;
+    height: 100%;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .col {
+        flex: 50%;
+        position: relative;
+
+        @include mobile {
+            flex: 100%;
+        }
+    }
+
+    .bg-col {
+        padding: 7% 5%;
+    }
+
+    .sm-col {
+        padding: 4% 3%;
+    }
+}
+
+.upper-row {
+    height: 65vh;
+}
+
+.bottom-row {
+    height: 35vh;
+}
+
+.slider {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

@@ -2,4 +2,26 @@
 header {
     color: white;
     padding: 20px;
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    @include mobile {
+        text-align: center;
+
+        .logo-li,
+        .hamburger-menu {
+            display: inline-block !important;
+        }
+
+        .hamburger-menu {
+            float: left;
+            font-size: 26px;
+        }
+
+        li {
+            display: none !important;
+        }
+    }
 }

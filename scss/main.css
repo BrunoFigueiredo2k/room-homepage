@@ -22,40 +22,12 @@
   cursor: pointer;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
+.active {
+  display: block;
 }
 
-.row .col {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  position: relative;
-}
-
-.row .bg-col {
-  padding: 7% 5%;
-}
-
-.row .sm-col {
-  padding: 4% 3%;
-}
-
-.upper-row {
-  height: 65vh;
-}
-
-.bottom-row {
-  height: 35vh;
-}
-
-.slider {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.inactive {
+  display: none;
 }
 
 /* Import all base .scss files */
@@ -279,7 +251,6 @@ textarea:focus {
   border: 1px solid #c7c7c7;
 }
 
-/* Place all modal/popup components styling here */
 #hero-bg-top-1 {
   background: url("../images/desktop-image-hero-1.jpg");
   background-repeat: no-repeat;
@@ -304,6 +275,13 @@ textarea:focus {
   background-position: 60%;
 }
 
+@media (min-width: 375px) and (max-width: 1439px) {
+  #hero-bg-bottom-1,
+  #hero-bg-bottom-2 {
+    height: 40vh !important;
+  }
+}
+
 /* Import all layouts .scss files */
 /* Footer component */
 footer {
@@ -316,5 +294,79 @@ footer {
 header {
   color: white;
   padding: 20px;
+}
+
+header .hamburger-menu {
+  display: none;
+}
+
+@media (min-width: 375px) and (max-width: 1439px) {
+  header {
+    text-align: center;
+  }
+  header .logo-li,
+  header .hamburger-menu {
+    display: inline-block !important;
+  }
+  header .hamburger-menu {
+    float: left;
+    font-size: 26px;
+  }
+  header li {
+    display: none !important;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width: 375px) and (max-width: 1439px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.row .col {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  position: relative;
+}
+
+@media (min-width: 375px) and (max-width: 1439px) {
+  .row .col {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.row .bg-col {
+  padding: 7% 5%;
+}
+
+.row .sm-col {
+  padding: 4% 3%;
+}
+
+.upper-row {
+  height: 65vh;
+}
+
+.bottom-row {
+  height: 35vh;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

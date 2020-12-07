@@ -18,3 +18,11 @@
 #hero-bg-bottom-2 {
     @include backgroundImageCover('../images/image-about-light.jpg');
 }
+
+@include mobile {
+
+    #hero-bg-bottom-1,
+    #hero-bg-bottom-2 {
+        height: 40vh !important;
+    }
+}
